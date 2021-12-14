@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<respostaConsultaPrestacions xmlns="http://www.aoc.cat/inss" xmlns:inss="http://intermediacion.redsara.es/scsp/esquemas/datosespecificos">
+	<resposta>
+		<inss:Pensionista>
+			<inss:Fec-proceso>String</inss:Fec-proceso>
+			<inss:Apellido1>String</inss:Apellido1>
+			<inss:Apellido2>String</inss:Apellido2>
+			<inss:Nombre>String</inss:Nombre>
+		</inss:Pensionista>
+		<inss:Pensiones>
+			<inss:Pension>
+				<inss:Cod-prest>String</inss:Cod-prest>
+				<inss:Lit-prest>String</inss:Lit-prest>
+				<inss:Tip-prest>String</inss:Tip-prest>
+				<inss:Ent-gest>String</inss:Ent-gest>
+				<inss:Ent-gest-lit>String</inss:Ent-gest-lit>
+				<inss:Imp-bruto>String</inss:Imp-bruto>
+				<inss:Imp-liquido>String</inss:Imp-liquido>
+				<inss:Num-pagas>String</inss:Num-pagas>
+				<inss:Fec-efectos>String</inss:Fec-efectos>
+				<inss:Fec-fin>String</inss:Fec-fin>
+				<inss:Fec-caus>String</inss:Fec-caus>
+				<inss:Bas-reg>String</inss:Bas-reg>
+				<inss:Tip-pago>String</inss:Tip-pago>
+			</inss:Pension>
+		</inss:Pensiones>
+	</resposta>
+	<resultat>
+		<codiResultat>String</codiResultat>
+		<descripcio>String</descripcio>
+	</resultat>
+</respostaConsultaPrestacions>
