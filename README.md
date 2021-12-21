@@ -89,16 +89,11 @@ determinats camps.
 //Pension/Num-pagas | Número de pagues de la prestació en el període d’un any.
 //Pension/Fec-efectos | Data d’efectes econòmics de la prestació (AAAAMMDD).
 //Pension/Fec-fin | Es correspon amb la data del fi del dret. No es retornarà la dada per les prestacions del RPSP.</br></br>Si és maternitat o paternitat es correspon amb la data de venciment del subsidi.</br></br>Si és incapacitat temporal es la data del darrer pagament realitzat en el pagament directe INSS.
-
-| _Element_ | _Descripció_ |
-| --- | --- |
-//Pension/Fec-causa | Data de baixa mèdica en IT o data d’inici de descans en cas de maternitat.</br>No es retornarà la dada per les prestacions del RPSP.
-
+//Pension/Fec-causa | Data de baixa mèdica en IT o data d’inici de descans en cas de maternitat.</br></br>No es retornarà la dada per les prestacions del RPSP.
 //Pension/Bas-reg | Base reguladora diària en el cas de pagamentdelegat.
 //Pension/Tip-pago | Per subsidis: <ul><li>1 : directe.</li><li>2 : delegat</li><li>No s’informa per prestacions R.P.S.P.</li></ul>
 //respostaConsultaPrestacions/resultat /descripcio | Descripció del resultat.
 //respostaConsultaPrestacions/resultat/codiResultat | Codi de resultat:<ul><li>0000 : titular amb prestacions localitzat.</li><li>0001 : documentació del titular incorrecta.</li><li>0002 : existeixen múltiples titulars pel mateix identificador.</li><li>0003 : titular no té prestacions.</li><li>0004 : prestacions trobades però no es retorna la totalitat de les mateixes ja que existeixen més de 20 prestacions d’IT o més de 35 prestacions en total (llindar màxim establert per l’emissor).</li><li>0005 : retorna prestacions de RPSP si en té però si n'hi hagués d'IT no es retornen degut a un error de comunicacions intern de l'emissor.</li><li>0006 : persona especialment protegida. Es retornen dades de les prestacions però aquestes dades han de tenir una protecció especial a l'hora de tractar-los per desig del titular de la prestació.</li><li>0502 : error realitzant la consulta.</li></ul>
-
 
 3.1.2.1 Prestacions
 
@@ -113,9 +108,6 @@ J4 | JUBILACION GRAN INVALIDEZ
 I6 | INCAPACIDAD TEMPORAL CONTING. COMUNES
 I7 | INCAPACIDAD TEMPORAL CONT. PROFESIONALES
 M6 | MATERNIDAD
-
-| Clau | Literal |
-| --- | --- |
 P6 | PATERNIDAD
 10 | INCAPACIDAD PERMANENTE
 11 | INCAPACIDAD ABSOLUTA
@@ -168,9 +160,6 @@ P6 | PATERNIDAD
 //respostaConsultaPrestacionsHistoric/peticioConsultaPrestacionsHistoric | Bloc de dades corresponent a la petició que origina la resposta.
 //respostaConsultaPrestacionsHistoric/resposta | Bloc de dades corresponent a la informació sobre les prestacions.
 //resposta/DocumentoIdentificativoUnivoco | Indica si el document identificatiu és unívoc:<ul><li>S: és unívoc.</li><li>N: el document és duplicat i requereix informar nom i cognoms a la petició.</li</ul>>
-
-| _Element_ | _Descripció_ |
-| --- | --- |
 //resposta/NumeroPrestacionesEncontradas |Número de prestacions: si és superior a 35, només retorna les 35 primeres.
 //resposta/Prestacion | Bloc de dades corresponent a una prestació.
 //Prestacion/CodigoPrestacion | Clau de la prestació obtinguda:<ul><li>I0: Incapacitat temporal.</li><li>I6: Incapacitat temporal per contingències comuns.</li><li>I7: Incapacitat temporal per contingències professionals.</li><li>M6: Maternitat.</li><li>M7 : Maternitat no contributiva.</li><li>P6: Paternitat.</li></ul>
@@ -185,23 +174,14 @@ P6 | PATERNIDAD
 //Prestacion/FechaHechoCausante | Data de fet causant (AAAA-MM-DD).<ul><li>Data de baixa mèdica en cas d’incapacitat temporal.</li><li>Data d’inici de descans en cas de maternitat.</li></ul>
 //Prestacion/BaseReguladora |Base reguladora diària en el cas de Pagament Delegat de la incapacitat temporal.
 //Prestacion/TipodePago | Tipus de pagament de la prestació:<ul><li>1 : directe.</li><li>2 : delegat.</li><li>3 : mútua.</li><li>En blanc: desconegut.</li></ul>
-
-| _Element_ | _Descripció_ |
-| --- | --- |
 //Prestacion/Pagos/Pago | Bloc de dades corresponent a un pagament.
-
 //Pago/Periododelpago | Mes en el que s’ha realitzat el pagament.
-
 //Pago/ImporteBrutoenelemes | Import brut pagat en el mes en cèntimsd’euro.
-
 //Pago/ImporteLiquidoenelemes | Import líquid pagat en el mes en cèntims d’euro.
-
 //respostaConsultaPrestacionsHistoric/resultat/descripcio | Descripció del resultat.
-
 //respostaConsultaPrestacionsHistoric/resultat/codiResultat | Codi de resultat:<ul><li>0000 : titular amb prestacions localitzat.</li><li>0001 : titular no té prestacions.</li><li>1105 : titular amb IPF duplicat. Cal informar nom i cognoms a la petició.</li><li>1200 : data inicial menor que la permesa.</li><li>1235 : prestacions trobades però no es retorna la totalitat de les mateixes ja que existeixen més de 35 prestacions (llindar màxim establert per l’emissor).</li><li>0502 : error realitzant la consulta.</li></ul>
 
 3.2.3.1 Entitats gestores
-
 
 | Clau | Literal |
 | --- | --- |
