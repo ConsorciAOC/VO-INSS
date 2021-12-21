@@ -97,9 +97,9 @@ determinats camps.
 
 3.1.2.1 Prestacions
 
-| Clau | Literal |
+| _Element_ | _Descripció_ |
 | --- | --- |
-| A2 | PROTECCION FAMILIAR| 
+A2 | PROTECCION FAMILIAR
 J0 | JUB. DERIVADA INCAPACIDAD PERMANENTE
 J1 | JUBILACION INCAPACIDAD ABSOLUTA
 J2 | JUBILACION INCAPACIDAD TOTAL
