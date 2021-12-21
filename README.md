@@ -9,10 +9,10 @@ Documentació d'integració del servei INSS del Consorci AOC.
    1. [Consulta de prestacions (PRESTACIONS)](#3.1)
       1. [Petició – dades genèriques](#3.1.1)
       2. [Resposta – dades específiques ](#3.1.2)
-   2. Consulta d’històric de prestacions (PRESTACIONS_HISTORIC)(#3.2)
-      1. Petició – dades genèriques(#3.2.1)
-      2. Petició – dades específiques(#3.2.2)
-      3. Resposta – dades específiques(#3.2.3)
+   2. [Consulta d’històric de prestacions (PRESTACIONS_HISTORIC)](#3.2)
+      1. [Petició – dades genèriques](#3.2.1)
+      2. [Petició – dades específiques](#3.2.2)
+      3. [Resposta – dades específiques](#3.2.3)
 
 ## 1 Introducció <a name="1"></a>
 
