@@ -97,7 +97,7 @@ determinats camps.
 
 3.1.2.1 Prestacions
 
-| _Element_ | _Descripció_ |
+| Clau | Literal |
 | --- | --- |
 A2 | PROTECCION FAMILIAR
 J0 | JUB. DERIVADA INCAPACIDAD PERMANENTE
@@ -182,7 +182,6 @@ P6 | PATERNIDAD
 
 | Clau | Literal |
 | --- | --- |
-
 001 | MUTUAL MIDAT CYCLOPS
 002 | MUTUALIA
 003 | ACTIVA MUTUA 2008
