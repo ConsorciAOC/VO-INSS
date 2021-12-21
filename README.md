@@ -82,9 +82,9 @@ determinats camps.
 //Pension/Cod-prest | Clau de prestació (vegeu l’apartat 3.1.2.1).
 //Pension/Lit-prest | Nom genèric si hi ha consentiment de l’interessat. Si no hi ha consentiment el literal serà fix: PRESTACION.
 //Pension/Tip-prest | Característica de la prestació: <ul><li>SI: contributiva.</li><li>NO: no contributiva.</li><li>En blanc: desconeguda.</li></ul></br>Totes les prestacions són contributives a excepció de la Protecció familiar (A2). Maternitat pot ser-ho o no.</br></br>Són NO contributives les gestionades per les CCAA (claus d’entitat gestora C), les prestacions de la A50 (Junta d’Andalusia) i les A52 (pensions assistencials).</br></br>La resta de prestacions són majoritàriament contributives tot i que en alguns casos no està clarament identificada la característica per la qual cosa, el valor anirà en blanc.
-//Pension/Ent-gest | Clau de l’entitat gestora que abona la prestació.</br>La clau serà un valor numèric en prestacions d’IT, maternitat i paternitat i alfanumèric per la resta de prestacions.
+//Pension/Ent-gest | Clau de l’entitat gestora que abona la prestació.</br></br>La clau serà un valor numèric en prestacions d’IT, maternitat i paternitat i alfanumèric per la resta de prestacions.
 //Pension/Ent-gest-lit | Nom de l’entitat gestora que abona la prestació.
-//Pension/Imp-bruto | Import brut mensual en cèntims d’euro (format NNNNNNN).</br>Correspon a l’import de la prestació, inclosos els imports de possibles deduccions més import de IRPF (si s’escau). Pot haver-hi prestacions amb import brut igual a 0.</br></br>Per totes les prestacions del RPSDP es retorna l’import mensual de la prestació a data de la consulta.</br></br>Per a prestacions M6 o P6 de pagament directe, l’import brut serà l’import abonat fins el moment de la consulta.</br></br>Si hi ha parts de confirmació capturats però no abonat, es calcularà el pagament i s’inclourà en l’imprt brut.</br></br>Quan l’import sigui zero es mostrarà el valor i etiqueta per prestacions RPSP i INCA pagament directe (tipus de pagament 1 ). No es mostrarà quan la prestació sigui INCA i pagament delegat (tipus de pagament 2 o 0 ).
+//Pension/Imp-bruto | Import brut mensual en cèntims d’euro (format NNNNNNN).</br></br>Correspon a l’import de la prestació, inclosos els imports de possibles deduccions més import de IRPF (si s’escau). Pot haver-hi prestacions amb import brut igual a 0.</br></br>Per totes les prestacions del RPSDP es retorna l’import mensual de la prestació a data de la consulta.</br></br>Per a prestacions M6 o P6 de pagament directe, l’import brut serà l’import abonat fins el moment de la consulta.</br></br>Si hi ha parts de confirmació capturats però no abonat, es calcularà el pagament i s’inclourà en l’imprt brut.</br></br>Quan l’import sigui zero es mostrarà el valor i etiqueta per prestacions RPSP i INCA pagament directe (tipus de pagament 1 ). No es mostrarà quan la prestació sigui INCA i pagament delegat (tipus de pagament 2 o 0 ).
 //Pension/Imp-liquido | Import líquid mensual en cèntims d’euro (formatNNNNNNN).</br></br>Correspon a l’import de la prestació, inclosos els imports de possibles deduccions més import de IRPF (si s’escau). Pot haver-hi prestacions amb import líquid igual a 0 per que es parteix d’un import brut igual a 0 o per que és 0 després d’aplicar les deduccions corresponents.</br></br>En totes les prestacions alienes al Sistema de la Seguretat Social l’import líquid coincidirà amb el brut ja que no es disposa de dades de possibles descomptes.</br></br>Quan l’import sigui zero es mostrarà el valor i etiqueta per prestacions RPSP i INCA pagament directe (tipus de pagament 1 ). No es mostrarà quan la prestació sigui INCA i pagament delegat (tipus de pagament 2 o 0 ).
 //Pension/Num-pagas | Número de pagues de la prestació en el període d’un any.
 //Pension/Fec-efectos | Data d’efectes econòmics de la prestació (AAAAMMDD).
@@ -148,9 +148,6 @@ P6 | PATERNIDAD
 | _Element_ | _Descripció_ |
 | --- | --- |
 //peticioConsultaPrestacionsHistoric/dataInici | Data d’inici del període a consultar (AAAA-MM-DD). La consulta no es podrà realitzar per una data anterior a l’1 de gener de l’any anterior a la data de la petició.
-
-| _Element_ | _Descripció_ |
-| --- | --- |
 //peticioConsultaPrestacionsHistoric/dataFi | Data de fi del període a consultar (AAAA-MM-DD). La consulta no es podrà realitzar amb data posterior a la data de la petició.
 
 #### 3.2.3 Resposta – dades específiques <a name="3.2.3"></a>
@@ -159,7 +156,7 @@ P6 | PATERNIDAD
 | --- | --- |
 //respostaConsultaPrestacionsHistoric/peticioConsultaPrestacionsHistoric | Bloc de dades corresponent a la petició que origina la resposta.
 //respostaConsultaPrestacionsHistoric/resposta | Bloc de dades corresponent a la informació sobre les prestacions.
-//resposta/DocumentoIdentificativoUnivoco | Indica si el document identificatiu és unívoc:<ul><li>S: és unívoc.</li><li>N: el document és duplicat i requereix informar nom i cognoms a la petició.</li</ul>>
+//resposta/DocumentoIdentificativoUnivoco | Indica si el document identificatiu és unívoc:<ul><li>S: és unívoc.</li><li>N: el document és duplicat i requereix informar nom i cognoms a la petició.</li></ul>>
 //resposta/NumeroPrestacionesEncontradas |Número de prestacions: si és superior a 35, només retorna les 35 primeres.
 //resposta/Prestacion | Bloc de dades corresponent a una prestació.
 //Prestacion/CodigoPrestacion | Clau de la prestació obtinguda:<ul><li>I0: Incapacitat temporal.</li><li>I6: Incapacitat temporal per contingències comuns.</li><li>I7: Incapacitat temporal per contingències professionals.</li><li>M6: Maternitat.</li><li>M7 : Maternitat no contributiva.</li><li>P6: Paternitat.</li></ul>
