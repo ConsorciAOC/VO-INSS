@@ -71,6 +71,10 @@ determinats camps.
 
 #### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
 
+<p align="center">
+<img align="center" src="img/3.1.2.png" />
+</p>
+
 | _Element_ | _Descripció_ |
 | --- | --- |
 //respostaConsultaPrestacions/resposta | Bloc de dades corresponent a la informació sobre les prestacions.
@@ -150,7 +154,15 @@ P6 | PATERNIDAD
 //peticioConsultaPrestacionsHistoric/dataInici | Data d’inici del període a consultar (AAAA-MM-DD). La consulta no es podrà realitzar per una data anterior a l’1 de gener de l’any anterior a la data de la petició.
 //peticioConsultaPrestacionsHistoric/dataFi | Data de fi del període a consultar (AAAA-MM-DD). La consulta no es podrà realitzar amb data posterior a la data de la petició.
 
+<p align="center">
+<img align="center" src="img/3.2.2.png" />
+</p>
+
 #### 3.2.3 Resposta – dades específiques <a name="3.2.3"></a>
+
+<p align="center">
+<img align="center" src="img/3.2.3.png" />
+</p>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
