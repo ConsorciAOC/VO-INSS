@@ -3,18 +3,18 @@ Documentació d'integració del servei INSS del Consorci AOC.
 
 # **Índex** #
 
-1. [Introducció]
-2. [Transmissions de dades disponibles]
-3. [Missatgeria del servei]
-   1. [Consulta de prestacions (PRESTACIONS)]
-      1. [Petició – dades genèriques]
-      2. [Resposta – dades específiques ]
-   2. Consulta d’històric de prestacions (PRESTACIONS_HISTORIC)
-      1. Petició – dades genèriques
-      2. Petició – dades específiques
-      3. Resposta – dades específiques
+1. [Introducció](#1)
+2. [Transmissions de dades disponibles](#2)
+3. [Missatgeria del servei](#3)
+   1. [Consulta de prestacions (PRESTACIONS)](#3.1)
+      1. [Petició – dades genèriques](#3.1.1)
+      2. [Resposta – dades específiques ](#3.1.2)
+   2. Consulta d’històric de prestacions (PRESTACIONS_HISTORIC)(#3.2)
+      1. Petició – dades genèriques(#3.2.1)
+      2. Petició – dades específiques(#3.2.2)
+      3. Resposta – dades específiques(#3.2.3)
 
-## 1 Introducció
+## 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de consulta de prestacions de l’Instituto
 Nacional de la Seguridad Social (en endavant INSS).
@@ -23,7 +23,7 @@ Per a poder realitzar la integració cal conèixer prèviament la següent docum
 
 - Document de Missatgeria Genèrica de la PCI del Consorci AOC.
 
-## 2 Transmissions de dades disponibles
+## 2 Transmissions de dades disponibles <a name="2"></a>
 
 Les dades disponibles a través del servei són les que es presenten a continuació:
 
@@ -38,7 +38,7 @@ Totes les consultes del producte tenen disponible la versió imprimible del resu
 format PDF. Per més detalls adreceu-vos a l’apartat Extensions de missatgeria del document de
 missatgeria genèrica.
 
-## 3 Missatgeria dels serveis
+## 3 Missatgeria dels serveis <a name="3"></a>
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les modalitats
 de consum del producte.
@@ -49,7 +49,7 @@ consulta. Així, cal informar l’element Funcionario del bloc de dades genèriq
 /Peticion/Funcionario i //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario.
 ```
 
-### 3.1 Consulta de prestacions (PRESTACIONS)
+### 3.1 Consulta de prestacions (PRESTACIONS) <a name="3.1"></a>
 
 La consulta es realitza mitjançant document identificatiu (NIF, NIE o passaport). Amb el document
 s’accedeix al fitxer general de persones físiques i si està unívocament identificat i és titular d’alguna
@@ -61,7 +61,7 @@ maternitat i paternitat. La suma de totes elles no superarà mai 35 prestacions.
 Es obligatori informar la dada consentiment ja que en funció d’aquest la resposta pot variar en
 determinats camps.
 
-#### 3.1.1 Petició – dades genèriques
+#### 3.1.1 Petició – dades genèriques <a name="3.1.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -70,7 +70,7 @@ determinats camps.
 //DatosGenericos/Solicitante/Consentimiento | Es té el consentiment del ciutadà per fer la
 consulta? (Si / Ley).
 
-#### 3.1.2 Resposta – dades específiques
+#### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -150,9 +150,9 @@ P6 | PATERNIDAD
 7A | AYUDA EMERGENCIA SOCIAL
 7R | RENTA INSERCION
 
-### 3.2 Consulta d’històric de prestacions (PRESTACIONS_HISTORIC)
+### 3.2 Consulta d’històric de prestacions (PRESTACIONS_HISTORIC) <a name="3.2"></a>
 
-#### 3.2.1 Petició – dades genèriques
+#### 3.2.1 Petició – dades genèriques <a name="3.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -161,7 +161,7 @@ P6 | PATERNIDAD
 //DatosGenericos/Titular/Nombre</br>//DatosGenericos/Titular/Apellido</br>//DatosGenericos/Titular/Apellido | Nom i cognoms. Requerits en cas d’IPF duplicat.
 //DatosGenericos/Solicitante/Consentimiento | Es té el consentiment del ciutadà per fer la consulta? (Si / Ley).
 
-#### 3.2.2 Petició – dades específiques
+#### 3.2.2 Petició – dades específiques <a name="3.2.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -171,7 +171,7 @@ P6 | PATERNIDAD
 | --- | --- |
 //peticioConsultaPrestacionsHistoric/dataFi | Data de fi del període a consultar (AAAA-MM-DD). La consulta no es podrà realitzar amb data posterior a la data de la petició.
 
-#### 3.2.3 Resposta – dades específiques
+#### 3.2.3 Resposta – dades específiques <a name="3.2.3"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
