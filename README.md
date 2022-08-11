@@ -13,6 +13,7 @@ Documentació d'integració del servei INSS del Consorci AOC.
       1. [Petició – dades genèriques](#3.2.1)
       2. [Petició – dades específiques](#3.2.2)
       3. [Resposta – dades específiques](#3.2.3)
+4. [4. Joc de proves](#4)
 
 ## 1 Introducció <a name="1"></a>
 
@@ -21,7 +22,10 @@ Nacional de la Seguridad Social (en endavant INSS).
 
 Per a poder realitzar la integració cal conèixer prèviament la següent documentació:
 
-- Document de Missatgeria Genèrica de la PCI del Consorci AOC.
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+
+[PCI]:https://github.com/ConsorciAOC/PCI
+
 
 ## 2 Transmissions de dades disponibles <a name="2"></a>
 
@@ -99,7 +103,7 @@ determinats camps.
 //respostaConsultaPrestacions/resultat /descripcio | Descripció del resultat.
 //respostaConsultaPrestacions/resultat/codiResultat | Codi de resultat:<ul><li>0000 : titular amb prestacions localitzat.</li><li>0001 : documentació del titular incorrecta.</li><li>0002 : existeixen múltiples titulars pel mateix identificador.</li><li>0003 : titular no té prestacions.</li><li>0004 : prestacions trobades però no es retorna la totalitat de les mateixes ja que existeixen més de 20 prestacions d’IT o més de 35 prestacions en total (llindar màxim establert per l’emissor).</li><li>0005 : retorna prestacions de RPSP si en té però si n'hi hagués d'IT no es retornen degut a un error de comunicacions intern de l'emissor.</li><li>0006 : persona especialment protegida. Es retornen dades de les prestacions però aquestes dades han de tenir una protecció especial a l'hora de tractar-los per desig del titular de la prestació.</li><li>0502 : error realitzant la consulta.</li></ul>
 
-3.1.2.1 Prestacions
+##### 3.1.2.1 Prestacions
 
 | Clau | Literal |
 | --- | --- |
@@ -190,7 +194,7 @@ P6 | PATERNIDAD
 //respostaConsultaPrestacionsHistoric/resultat/descripcio | Descripció del resultat.
 //respostaConsultaPrestacionsHistoric/resultat/codiResultat | Codi de resultat:<ul><li>0000 : titular amb prestacions localitzat.</li><li>0001 : titular no té prestacions.</li><li>1105 : titular amb IPF duplicat. Cal informar nom i cognoms a la petició.</li><li>1200 : data inicial menor que la permesa.</li><li>1235 : prestacions trobades però no es retorna la totalitat de les mateixes ja que existeixen més de 35 prestacions (llindar màxim establert per l’emissor).</li><li>0502 : error realitzant la consulta.</li></ul>
 
-3.2.3.1 Entitats gestores
+##### 3.2.3.1 Entitats gestores
 
 | Clau | Literal |
 | --- | --- |
@@ -216,3 +220,13 @@ P6 | PATERNIDAD
 276 | EGARSAT
 777 | I.N.S.S
 888 | INSTITUTO SOCIAL DE LA MARINA
+
+# 4 Joc de proves
+
+
+L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
+
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
