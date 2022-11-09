@@ -13,7 +13,7 @@ Documentació d'integració del servei INSS del Consorci AOC.
       1. [Petició – dades genèriques](#3.2.1)
       2. [Petició – dades específiques](#3.2.2)
       3. [Resposta – dades específiques](#3.2.3)
-4. [4. Joc de proves](#4)
+4. [Joc de proves](#4)
 
 ## 1 Introducció <a name="1"></a>
 
@@ -221,7 +221,7 @@ P6 | PATERNIDAD
 777 | I.N.S.S
 888 | INSTITUTO SOCIAL DE LA MARINA
 
-# 4 Joc de proves
+# 4 Joc de proves <a name="4"></a>
 
 
 L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
@@ -229,4 +229,4 @@ L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-pr
 [proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
 ![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
 
-[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
+[form]:https://suport.aoc.cat/hc/ca/requests/new
