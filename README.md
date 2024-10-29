@@ -71,6 +71,7 @@ determinats camps.
 | --- | --- |
 //DatosGenericos/Titular/TipoDocumentacion | Tipus de documentació (NIF, Pasaporte, NIE).
 //DatosGenericos/Titular/Documentacion | Documentació.
+//DatosGenericos/Titular/Nombre</br>//DatosGenericos/Titular/Apellido</br>//DatosGenericos/Titular/Apellido | Nom i cognoms. Requerits quan existeixen múltiples persones amb el mateix identificador.
 //DatosGenericos/Solicitante/Consentimiento | Es té el consentiment del ciutadà per fer la consulta? (Si / Ley).
 
 #### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
@@ -172,10 +173,10 @@ P6 | PATERNIDAD
 | --- | --- |
 //respostaConsultaPrestacionsHistoric/peticioConsultaPrestacionsHistoric | Bloc de dades corresponent a la petició que origina la resposta.
 //respostaConsultaPrestacionsHistoric/resposta | Bloc de dades corresponent a la informació sobre les prestacions.
-//resposta/DocumentoIdentificativoUnivoco | Indica si el document identificatiu és unívoc:<ul><li>S: és unívoc.</li><li>N: el document és duplicat i requereix informar nom i cognoms a la petició.</li></ul>>
+//resposta/DocumentoIdentificativoUnivoco | Indica si el document identificatiu és unívoc:<ul><li>S: és unívoc.</li><li>N: el document és duplicat i requereix informar nom i cognoms a la petició.</li></ul>
 //resposta/NumeroPrestacionesEncontradas |Número de prestacions: si és superior a 35, només retorna les 35 primeres.
 //resposta/Prestacion | Bloc de dades corresponent a una prestació.
-//Prestacion/CodigoPrestacion | Clau de la prestació obtinguda:<ul><li>I0: Incapacitat temporal.</li><li>I6: Incapacitat temporal per contingències comuns.</li><li>I7: Incapacitat temporal per contingències professionals.</li><li>M6: Maternitat.</li><li>M7 : Maternitat no contributiva.</li><li>P6: Paternitat.</li></ul>
+//Prestacion/CodigoPrestacion | Clau de la prestació obtinguda:<ul><li>I0: Incapacitat temporal.</li><li>I6: Incapacitat temporal per contingències comuns.</li><li>I7: Incapacitat temporal per contingències professionals.</li><li>M6: Naixement i cura del menor contributiva.</li><li>M7 :Naixement i cura del menor no contributiva.</li><li>
 //Prestacion/LiteralPrestacion | Nom genèric si hi ha consentiment de l’interessat. Si no hi ha consentiment s’informa PRESTACION.
 //Prestacion/TipoPrestacion | Tipus de prestació:<ul><li>SI: contributiva.</li><li>NO: no contributiva.</li><li>En blanc: desconeguda.</li></ul></br>Totes les prestacions del Sistema de la Seguretat Social són contributives amb l'excepció de la Protecció Familiar (clau de prestació A1, A2 i A3). La maternitat pot ser o no ser-ho.
 //Prestacion/CodigoEntidad | Clau de l’entitat gestora o que abona laprestació (vegeu l’apartat 3.2.3.1).
